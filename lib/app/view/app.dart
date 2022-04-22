@@ -5,6 +5,7 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+import 'package:envubi/app/theme.dart';
 import 'package:envubi/authentication/landing_page.dart';
 import 'package:envubi/l10n/l10n.dart';
 import 'package:flutter/material.dart';
@@ -16,12 +17,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.light().copyWith(
-        appBarTheme: const AppBarTheme(color: Color(0xFF13B9FF)),
-        colorScheme: ColorScheme.fromSwatch(
-          accentColor: Theme.of(context).colorScheme.secondary,
-        ),
-      ),
+      theme: lightTheme,
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,

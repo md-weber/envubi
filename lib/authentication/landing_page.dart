@@ -12,11 +12,11 @@ class LandingPage extends StatelessWidget {
     final localizations = AppLocalizations.of(context);
     return Material(
       child: SafeArea(
+        bottom: false,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
-              flex: 4,
               child: PageView(
                 controller: controller,
                 children: [
@@ -40,9 +40,10 @@ class LandingPage extends StatelessWidget {
               ),
             ),
             Expanded(
+              flex: 0,
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: Spacings.small * 2),
+                    const EdgeInsets.symmetric(horizontal: Spacings.medium),
                 child: DecoratedBox(
                   decoration: const BoxDecoration(
                     color: Colors.white,
@@ -58,34 +59,44 @@ class LandingPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: Spacings.small * 2,
-                          vertical: Spacings.small * 2,
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                child: const Text('Sign in'),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: Spacings.small,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: Spacings.medium,
+                            vertical: Spacings.medium,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Expanded(
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    // TODO: Implement and write tests
+                                  },
+                                  child: const Text('Sign in'),
+                                ),
                               ),
-                            ),
-                            const SizedBox(width: Spacings.small),
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                child: const Text('Register'),
+                              const SizedBox(width: Spacings.small),
+                              Expanded(
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    // TODO: Implement and write tests
+                                  },
+                                  child: const Text('Register'),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
