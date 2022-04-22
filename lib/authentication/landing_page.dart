@@ -1,14 +1,34 @@
+import 'package:envubi/authentication/landing_page/progress_dots.dart';
 import 'package:envubi/authentication/onboarding_steps.dart';
 import 'package:envubi/constants.dart';
 import 'package:envubi/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 
-class LandingPage extends StatelessWidget {
+class LandingPage extends StatefulWidget {
   const LandingPage({Key? key}) : super(key: key);
 
   @override
+  State<LandingPage> createState() => _LandingPageState();
+}
+
+class _LandingPageState extends State<LandingPage>
+    with SingleTickerProviderStateMixin {
+  late TabController controller;
+
+  @override
+  void initState() {
+    controller = TabController(length: 3, vsync: this);
+
+    controller.addListener(() {
+      print("Once");
+      setState(() {});
+    });
+
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final controller = PageController();
     final localizations = AppLocalizations.of(context);
     return Material(
       child: SafeArea(
@@ -17,7 +37,7 @@ class LandingPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
-              child: PageView(
+              child: TabBarView(
                 controller: controller,
                 children: [
                   OnboardingSlide(
@@ -48,8 +68,8 @@ class LandingPage extends StatelessWidget {
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(Spacings.small * 4),
-                      topRight: Radius.circular(Spacings.small * 4),
+                      topLeft: Radius.circular(Spacings.xtraLarge),
+                      topRight: Radius.circular(Spacings.xtraLarge),
                     ),
                     boxShadow: [
                       BoxShadow(
@@ -67,6 +87,16 @@ class LandingPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            for (int i = 0; i <= 2; i++)
+                              ProgressIndicatorDot(
+                                activePageIndex: controller.index,
+                                referencePageIndex: i,
+                              ),
+                          ],
+                        ),
                         Padding(
                           padding: const EdgeInsets.symmetric(
                             horizontal: Spacings.medium,
