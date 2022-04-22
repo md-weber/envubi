@@ -20,7 +20,6 @@ class _LandingPageState extends State<LandingPage>
     controller = TabController(length: 3, vsync: this);
 
     controller.addListener(() {
-      print("Once");
       setState(() {});
     });
 
@@ -88,7 +87,7 @@ class _LandingPageState extends State<LandingPage>
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             for (int i = 0; i <= 2; i++)
                               ProgressIndicatorDot(
