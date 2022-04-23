@@ -1,4 +1,4 @@
-package com.example.verygoodcore.envubi
+package dev.flutterexplained.envubi
 
 import io.flutter.embedding.android.FlutterActivity
 

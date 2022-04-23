@@ -89,11 +89,11 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example.verygoodcore.envubi" "\0"
+            VALUE "CompanyName", "dev.flutterexplained.envubi" "\0"
             VALUE "FileDescription", "envubi" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "envubi" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2022 com.example.verygoodcore.envubi. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2022 dev.flutterexplained.envubi. All rights reserved." "\0"
             VALUE "OriginalFilename", "envubi.exe" "\0"
             VALUE "ProductName", "Envubi" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
