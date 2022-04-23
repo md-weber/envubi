@@ -31,10 +31,46 @@
               "client_type": 3
             },
             {
-              "client_id": "596077333833-va3i9ed9ktms9568maqp5dtm5rg844bt.apps.googleusercontent.com",
+              "client_id": "596077333833-q8r2g9c4gs20s5r4bj2omfpi8b40af9e.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.verygoodcore.envubi"
+                "bundle_id": "dev.flutterexplained.envubi"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596077333833:android:db21dc70067d388e301e98",
+        "android_client_info": {
+          "package_name": "dev.flutterexplained.envubi.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596077333833-tnpqv8d6k6mpefqrsonch3rclj577gfa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsu1bakU1Nh1MlY8sYwMvPs-Sc0TnZQVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596077333833-tnpqv8d6k6mpefqrsonch3rclj577gfa.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "596077333833-q8r2g9c4gs20s5r4bj2omfpi8b40af9e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.flutterexplained.envubi"
               }
             }
           ]
