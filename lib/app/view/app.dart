@@ -6,7 +6,7 @@
 // https://opensource.org/licenses/MIT.
 
 import 'package:envubi/app/theme.dart';
-import 'package:envubi/authentication/landing_page.dart';
+import 'package:envubi/auth/landing_page.dart';
 import 'package:envubi/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
