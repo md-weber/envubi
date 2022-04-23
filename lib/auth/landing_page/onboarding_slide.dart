@@ -10,7 +10,7 @@ class OnboardingSlide extends StatelessWidget {
   const OnboardingSlide(
     this.stepImageAssetPath, {
     required this.headlineText,
-    this.bodyText,
+    required this.bodyText,
     Key? key,
   }) : super(key: key);
 
@@ -40,14 +40,11 @@ class OnboardingSlide extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 2 * 8),
-        if (bodyText == null || bodyText!.isEmpty)
-          const SizedBox()
-        else
-          Text(
-            bodyText!,
-            style: textTheme.bodyMedium,
-            textAlign: TextAlign.center,
-          )
+        Text(
+          bodyText!,
+          style: textTheme.bodyMedium,
+          textAlign: TextAlign.center,
+        )
       ],
     );
   }
