@@ -1,5 +1,5 @@
 import 'package:envubi/authentication/landing_page/progress_dots.dart';
-import 'package:envubi/authentication/onboarding_steps.dart';
+import 'package:envubi/authentication/landing_page/onboarding_steps.dart';
 import 'package:envubi/constants.dart';
 import 'package:envubi/l10n/l10n.dart';
 import 'package:flutter/material.dart';
