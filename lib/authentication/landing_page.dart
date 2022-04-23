@@ -109,7 +109,9 @@ class _LandingPageState extends State<LandingPage>
                                   onPressed: () {
                                     // TODO: Implement and write tests
                                   },
-                                  child: const Text('Sign in'),
+                                  child: Text(
+                                    localizations.domain_landing_signIn,
+                                  ),
                                 ),
                               ),
                               const SizedBox(width: Spacings.small),
@@ -118,7 +120,9 @@ class _LandingPageState extends State<LandingPage>
                                   onPressed: () {
                                     // TODO: Implement and write tests
                                   },
-                                  child: const Text('Register'),
+                                  child: Text(
+                                    localizations.domain_landing_register,
+                                  ),
                                 ),
                               ),
                             ],

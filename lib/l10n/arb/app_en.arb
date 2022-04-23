@@ -5,5 +5,7 @@
   "domain_landing_headlineStepThree": "Instant notification",
   "domain_landing_bodyStepOne": "Quizzes for everyone but mostly for amazing flutter developers who cannot get enough of Flutter knowledge. BTW. Flutter rulez",
   "domain_landing_bodyStepTwo": "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus.",
-  "domain_landing_bodyStepThree": "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus."
+  "domain_landing_bodyStepThree": "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus.",
+  "domain_landing_signIn": "Sign in",
+  "domain_landing_register": "Register"
 }
