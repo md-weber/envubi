@@ -13,17 +13,24 @@ class LandingPage extends StatefulWidget {
 
 class _LandingPageState extends State<LandingPage>
     with SingleTickerProviderStateMixin {
-  late TabController controller;
+  PageController controller = PageController();
+  int currentPage = 0;
 
   @override
   void initState() {
-    controller = TabController(length: 3, vsync: this);
-
     controller.addListener(() {
-      setState(() {});
+      setState(() {
+        currentPage = (controller.page ?? 0).round();
+      });
     });
 
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -36,24 +43,23 @@ class _LandingPageState extends State<LandingPage>
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
-              child: TabBarView(
+              child: PageView(
                 controller: controller,
                 children: [
                   OnboardingSlide(
                     StepImages.stepOne,
-                    headlineText: localizations.domain_landing_headlineStepOne,
-                    bodyText: localizations.domain_landing_bodyStepOne,
+                    headlineText: localizations.auth_landing_headlineStepOne,
+                    bodyText: localizations.auth_landing_bodyStepOne,
                   ),
                   OnboardingSlide(
                     StepImages.stepTwo,
-                    headlineText: localizations.domain_landing_headlineStepTwo,
-                    bodyText: localizations.domain_landing_bodyStepTwo,
+                    headlineText: localizations.auth_landing_headlineStepTwo,
+                    bodyText: localizations.auth_landing_bodyStepTwo,
                   ),
                   OnboardingSlide(
                     StepImages.stepThree,
-                    headlineText:
-                        localizations.domain_landing_headlineStepThree,
-                    bodyText: localizations.domain_landing_bodyStepThree,
+                    headlineText: localizations.auth_landing_headlineStepThree,
+                    bodyText: localizations.auth_landing_bodyStepThree,
                   ),
                 ],
               ),
@@ -91,7 +97,7 @@ class _LandingPageState extends State<LandingPage>
                           children: [
                             for (int i = 0; i <= 2; i++)
                               ProgressIndicatorDot(
-                                activePageIndex: controller.index,
+                                activePageIndex: currentPage,
                                 referencePageIndex: i,
                               ),
                           ],
@@ -110,7 +116,7 @@ class _LandingPageState extends State<LandingPage>
                                     // TODO: Implement and write tests
                                   },
                                   child: Text(
-                                    localizations.domain_landing_signIn,
+                                    localizations.auth_landing_signIn,
                                   ),
                                 ),
                               ),
@@ -121,7 +127,7 @@ class _LandingPageState extends State<LandingPage>
                                     // TODO: Implement and write tests
                                   },
                                   child: Text(
-                                    localizations.domain_landing_register,
+                                    localizations.auth_landing_register,
                                   ),
                                 ),
                               ),
