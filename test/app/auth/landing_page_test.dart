@@ -45,4 +45,16 @@ void main() {
     expect(sizeSecond.width, 32, reason: 'Second indicator should be active');
     expect(sizeThird.width, 16, reason: 'Third indicator should be inactive');
   });
+
+  testWidgets('WHEN user pressed on SignIn THEN nothing happens',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(subject);
+    await tester.tap(find.byType(ElevatedButton).at(0));
+  });
+
+  testWidgets('WHEN user pressed on Register THEN nothing happens',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(subject);
+    await tester.tap(find.byType(ElevatedButton).at(1));
+  });
 }
