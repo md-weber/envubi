@@ -25,10 +25,5 @@ void main() {
     expect(titleFinder, findsOneWidget);
     expect(messageFinder, findsOneWidget);
     expect(imageFinder, findsOneWidget);
-
-    await expectLater(
-      find.byType(OnboardingSlide),
-      matchesGoldenFile('snapshots/onboarding_slide.png'),
-    );
   });
 }
