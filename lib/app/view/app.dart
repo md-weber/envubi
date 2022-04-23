@@ -5,9 +5,10 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+import 'package:envubi/app/routes.dart';
 import 'package:envubi/app/theme.dart';
-import 'package:envubi/auth/landing_page.dart';
 import 'package:envubi/l10n/l10n.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -17,13 +18,15 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute:
+          FirebaseAuth.instance.currentUser == null ? '/sign-in' : '/quiz',
+      routes: routes,
       theme: lightTheme,
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const LandingPage(),
     );
   }
 }
