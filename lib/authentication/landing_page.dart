@@ -112,9 +112,7 @@ class _LandingPageState extends State<LandingPage>
                             children: [
                               Expanded(
                                 child: ElevatedButton(
-                                  onPressed: () {
-                                    // TODO: Implement and write tests
-                                  },
+                                  onPressed: () {},
                                   child: Text(
                                     localizations.auth_landing_signIn,
                                   ),
@@ -123,9 +121,7 @@ class _LandingPageState extends State<LandingPage>
                               const SizedBox(width: Spacings.small),
                               Expanded(
                                 child: ElevatedButton(
-                                  onPressed: () {
-                                    // TODO: Implement and write tests
-                                  },
+                                  onPressed: () {},
                                   child: Text(
                                     localizations.auth_landing_register,
                                   ),
